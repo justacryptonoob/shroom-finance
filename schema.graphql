@@ -1,0 +1,23 @@
+type Approve @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+}
+
+type OwnershipTransfered @entity {
+  id: ID!
+  count: BigInt!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}
+
+type Transfered @entity {
+  id: ID!
+  value: BigInt!
+  blockNumber: BigInt!
+  from: Bytes!
+  to: Bytes!
+  timestamp: BigInt
+  transactionHash: Bytes!  
+}
